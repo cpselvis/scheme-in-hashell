@@ -12,6 +12,9 @@ module Lang.Scheme.Types
     -- * Types
     LispVal (
         Atom
+      , String
+      , Number
+      , Bool
       , List
       , DottedList)
   )
@@ -19,6 +22,12 @@ module Lang.Scheme.Types
 
 -- |Scheme data types
 data LispVal = Atom String
+  -- ^String
+  | String String
+  -- ^Number
+  | Number Integer
+  -- ^Bool
+  | Bool Bool
   -- ^Symbol
   | List [LispVal]
   -- ^List
